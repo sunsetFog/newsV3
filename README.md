@@ -1,29 +1,35 @@
+# demo6
 
-### 安装依赖包
-
-```bash
+## Project setup
+```
 npm install
 ```
 
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
 
 ## 开发运行
-
-
-
-
-
-开发编译（调用生产环境接口）：
-
-
-
-
-
-开发编译（调用测试环境接口）：
+开发编译
 
 ## 测试/生产部署
-
 编译打包
-
 
 
 ### 项目目录：
@@ -61,16 +67,10 @@ npm install
 ├── .gitignore // 提交git仓忽略的文件
 ├── babel.config.js // babel配置
 ├── package.json // 项目描述
-├── postcss.config.js // postcss配置
+├── postcss.config.js // px自动转rem配置
 |
 ├── README.md // 项目说明文档
 |
 ├── vue.config.js // 项目工程配置
 └── yarn.lock // yarn管理依赖
 ```
-
-
-
-
-
-
