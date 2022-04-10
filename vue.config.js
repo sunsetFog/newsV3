@@ -1,14 +1,22 @@
 /**
  * @description 项目工程配置
+ * 官网：https://cli.vuejs.org/zh/config/#vue-config-js
  */
 const path = require('path')
-console.log('config.js process.env.VUE_APP_API_HOST=', process.env.VUE_APP_API_HOST)
-console.log('config.js process.env.VUE_APP_RUN_FLAG=', process.env.VUE_APP_RUN_FLAG)
-console.log('process.env.NODE_ENV=', process.env.NODE_ENV)
-console.log('process.env.VUE_APP_VCONSOLE=', process.env.VUE_APP_VCONSOLE)
-console.log('typeof process.env.VUE_APP_VCONSOLE=', typeof process.env.VUE_APP_VCONSOLE)
+
+function curPath (dir) {
+  return path.join(__dirname, '.', dir)
+}
 
 module.exports = {
+  configureWebpack: {
+    devtool: 'source-map', // 断点调试
+    resolve: {
+      alias: {
+        '@': curPath('src')
+      }
+    }
+  },
   // css: {
   //   loaderOptions: {
   //     sass: {
@@ -38,14 +46,7 @@ module.exports = {
       })
   },
 
-  // 直接修改webpack配置，不推荐
-  configureWebpack: config => {
-    if (process.env.NODE_ENV === 'production') {
-      // 为生产环境修改配置...
-    } else {
-      // 为开发环境修改配置...
-    }
-  },
+
 
   pluginOptions: {
     'style-resources-loader': {
