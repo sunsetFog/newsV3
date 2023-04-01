@@ -1,12 +1,9 @@
 import { createStore } from 'vuex'
 
+import apple from './modular/apple'
+
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+      apple
   }
 })
