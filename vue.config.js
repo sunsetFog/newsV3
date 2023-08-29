@@ -1,5 +1,5 @@
 /**
- * @description 项目工程配置
+ * @description vue-cli3主配置
  * 官网：https://cli.vuejs.org/zh/config/#vue-config-js
  */
 const path = require('path')
